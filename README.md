@@ -50,7 +50,7 @@ Density and coverage are defined below:
 ### Why are DC better than PR?
 
 <p align="center">
-  <img src="figure/p_vs_d.png" alt="Precision versus density." width="500"/>
+  <img src="https://github.com/clovaai/prdc/blob/master/figure/p_vs_d.png?raw=true" alt="Precision versus density." width="500"/>
 </p>
 
 **Precision versus Density.** 
@@ -58,7 +58,7 @@ Because of the real outlier sample, the manifold is overestimated. Generating ma
 The problem of overestimating precision (100%) is resolved using the density estimate (60%). 
 
 <p align="center">
-  <img src="figure/r_vs_c.png" alt="Recall versus coverage." width="600"/>
+  <img src="https://github.com/clovaai/prdc/blob/master/figure/r_vs_c.png?raw=true" alt="Recall versus coverage." width="600"/>
 </p>
 
 **Recall versus Coverage.** 

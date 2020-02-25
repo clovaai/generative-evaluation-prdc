@@ -1,6 +1,6 @@
 ## Reliable Fidelity and Diversity Metrics for Generative Models
 
-[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/)
+[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)
 
 Muhammad Ferjad Naeem <sup>1,3*</sup>, Seong Joon Oh<sup>2*</sup>, Yunjey Choi<sup>1</sup>, 
 Youngjung Uh<sup>1</sup>, Jaejun Yoo<sup>1,4</sup>  
@@ -141,4 +141,10 @@ THE SOFTWARE.
 ### Cite this work
 
 ```
+@article{ferjad2020ganeval,
+title = {Reliable Fidelity and Diversity Metrics for Generative Models},
+author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},
+year = {2020},
+journal = {arXiv},
+}
 ```

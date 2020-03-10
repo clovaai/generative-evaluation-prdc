@@ -1,3 +1,7 @@
+[![PyPI version](https://badge.fury.io/py/prdc.svg)](https://badge.fury.io/py/prdc)
+[![PyPI download month](https://img.shields.io/pypi/dm/prdc.svg)](https://pypi.python.org/pypi/prdc/)
+[![PyPI license](https://img.shields.io/pypi/l/prdc.svg)](https://pypi.python.org/pypi/prdc/)
+
 ## Reliable Fidelity and Diversity Metrics for Generative Models
 
 [Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)

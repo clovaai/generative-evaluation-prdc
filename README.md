@@ -2,7 +2,7 @@
 [![PyPI download month](https://img.shields.io/pypi/dm/prdc.svg)](https://pypi.python.org/pypi/prdc/)
 [![PyPI license](https://img.shields.io/pypi/l/prdc.svg)](https://pypi.python.org/pypi/prdc/)
 
-## Reliable Fidelity and Diversity Metrics for Generative Models
+## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)
 
 [Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)
 
@@ -21,6 +21,10 @@ Devising indicative evaluation metrics for the image generation task remains an 
 The most widely used metric for measuring the similarity between real and generated images has been the Fr&eacute;chet Inception Distance (FID) score. 
 Because it does not differentiate the _fidelity_ and _diversity_ aspects of the generated images, recent papers have introduced variants of precision and recall metrics to diagnose those properties separately.
 In this paper, we show that even the latest version of the precision and recall (Kynk&auml;&auml;nniemi et al., 2019) metrics are not reliable yet. For example, they fail to detect the match between two identical distributions, they are not robust against outliers, and the evaluation hyperparameters are selected arbitrarily. We propose **density and coverage** metrics that solve the above issues. We analytically and experimentally show that density and coverage provide more interpretable and reliable signals for practitioners than the existing metrics.
+
+## Updates
+
+* **1 June 2020**: Paper accepted at ICML 2020.
 
 ## 1. Background
 
@@ -145,10 +149,10 @@ THE SOFTWARE.
 ### Cite this work
 
 ```
-@article{ferjad2020ganeval,
-title = {Reliable Fidelity and Diversity Metrics for Generative Models},
-author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},
-year = {2020},
-journal = {arXiv},
+@article{ferjad2020icml,
+  title = {Reliable Fidelity and Diversity Metrics for Generative Models},
+  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},
+  year = {2020},
+  booktitle = {International Conference on Machine Learning},
 }
 ```

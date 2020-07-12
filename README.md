@@ -22,6 +22,10 @@ The most widely used metric for measuring the similarity between real and genera
 Because it does not differentiate the _fidelity_ and _diversity_ aspects of the generated images, recent papers have introduced variants of precision and recall metrics to diagnose those properties separately.
 In this paper, we show that even the latest version of the precision and recall (Kynk&auml;&auml;nniemi et al., 2019) metrics are not reliable yet. For example, they fail to detect the match between two identical distributions, they are not robust against outliers, and the evaluation hyperparameters are selected arbitrarily. We propose **density and coverage** metrics that solve the above issues. We analytically and experimentally show that density and coverage provide more interpretable and reliable signals for practitioners than the existing metrics.
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=_XwsGkryVpk
+" target="_blank"><img src="http://img.youtube.com/vi/_XwsGkryVpk/0.jpg" 
+alt="VIDEO" width="700" border="10" /></a>
+
 ## Updates
 
 * **1 June 2020**: Paper accepted at ICML 2020.

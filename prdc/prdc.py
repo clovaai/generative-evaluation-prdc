@@ -6,7 +6,7 @@ MIT license
 import numpy as np
 import sklearn.metrics
 
-__all__ = ['compute_prdc']
+__all__ = ['compute_prdc', 'compute_density', 'compute_coverage']
 
 
 def compute_pairwise_distance(data_x, data_y=None):
@@ -49,6 +49,56 @@ def compute_nearest_neighbour_distances(input_features, nearest_k):
     distances = compute_pairwise_distance(input_features)
     radii = get_kth_value(distances, k=nearest_k + 1, axis=-1)
     return radii
+
+
+def compute_density(real_features, fake_features, nearest_k):
+    """
+    Computes density given two manifolds.
+
+    Args:
+        real_features: numpy.ndarray([N, feature_dim], dtype=np.float32)
+        fake_features: numpy.ndarray([N, feature_dim], dtype=np.float32)
+        nearest_k: int.
+    Returns:
+        density: np.float64
+    """
+
+    real_nearest_neighbour_distances = compute_nearest_neighbour_distances(
+        real_features, nearest_k)
+    distance_real_fake = compute_pairwise_distance(
+        real_features, fake_features)
+
+    density = (1. / float(nearest_k)) * (
+            distance_real_fake <
+            np.expand_dims(real_nearest_neighbour_distances, axis=1)
+    ).sum(axis=0).mean()
+
+    return density
+
+
+def compute_coverage(real_features, fake_features, nearest_k):
+    """
+    Computes coverage given two manifolds.
+
+    Args:
+        real_features: numpy.ndarray([N, feature_dim], dtype=np.float32)
+        fake_features: numpy.ndarray([N, feature_dim], dtype=np.float32)
+        nearest_k: int.
+    Returns:
+        coverage: np.float64
+    """
+
+    real_nearest_neighbour_distances = compute_nearest_neighbour_distances(
+        real_features, nearest_k)
+    distance_real_fake = compute_pairwise_distance(
+        real_features, fake_features)
+
+    coverage = (
+            distance_real_fake.min(axis=1) <
+            real_nearest_neighbour_distances
+    ).mean()
+
+    return coverage
 
 
 def compute_prdc(real_features, fake_features, nearest_k):

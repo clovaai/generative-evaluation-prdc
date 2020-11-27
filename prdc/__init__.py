@@ -1,1 +1,1 @@
-from .prdc import compute_prdc
+from .prdc import compute_prdc, compute_coverage, compute_density
